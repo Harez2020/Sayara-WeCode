@@ -1,16 +1,16 @@
 // ignore: unused_import
 import 'package:flutter/material.dart';
 
-class MyApp extends StatefulWidget {
-  const MyApp({super.key});
+class ProductDetailsScreen extends StatefulWidget {
+  const ProductDetailsScreen(String s, {super.key});
 
   @override
   State<StatefulWidget> createState() {
-    return MyAppState();
+    return ProductDetailsScreenState();
   }
 }
 
-class MyAppState extends State<MyApp> {
+class ProductDetailsScreenState extends State<ProductDetailsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

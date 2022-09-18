@@ -39,6 +39,8 @@ dependencies:
   firebase_core: ^1.20.1
   screens: ^2.5.0
   cloud_firestore: ^3.4.6
+  image_picker: ^0.8.5+3
+  photo_manager: ^2.2.1
 
  
 
@@ -65,9 +67,17 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/images/bmw-wheel-golden.png
+    - assets/images/Car-Engine-Background-PNG-Image.png
+    - assets/images/bmw-wheel-golden.png
+    - assets/images/bmw-wheel-golden.png
+    - assets/images/bmw-wheel-golden.png
+    - assets/images/bmw-wheel-golden.png
+    - assets/images/bmw-wheel-golden.png
+    - assets/images/bmw-wheel-golden.png
+    - assets/images/bmw-wheel-golden.png
+    - assets/images/bmw-wheel-golden.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
