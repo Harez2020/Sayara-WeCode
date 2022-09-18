@@ -118,10 +118,7 @@ class MyAppState extends State<MyApp> {
               myImages[index],
             ),
 
-            //  ],
-          );
-
-          /*     ElevatedButton(
+            /*     ElevatedButton(
             onPressed: () {
               Navigator.push(
                 context,
@@ -132,6 +129,7 @@ class MyAppState extends State<MyApp> {
             );
             child: null;
           ) */
+          );
         }),
       ),
       bottomNavigationBar: BottomNavigationBar(
