@@ -2,8 +2,9 @@
 import 'package:flutter/material.dart';
 
 class ProductDetailsScreen extends StatefulWidget {
-  const ProductDetailsScreen(String s, {super.key});
+  const ProductDetailsScreen({super.key, required this.s});
 
+  final String s;
   @override
   State<StatefulWidget> createState() {
     return ProductDetailsScreenState();
@@ -23,26 +24,7 @@ class ProductDetailsScreenState extends State<ProductDetailsScreen> {
         child: Column(
           children: <Widget>[
             Container(
-              color: Colors.blue,
-              height: 400,
-              width: 400,
-            ),
-            Container(
-              color: Colors.blue,
-              height: 400,
-              width: 400,
-            ),
-            Container(
-              color: Colors.blue,
-              height: 400,
-              width: 400,
-            ),
-            Container(
-              color: Colors.blue,
-              height: 400,
-              width: 400,
-            ),
-            Container(
+              child: Image.asset(widget.s),
               color: Colors.blue,
               height: 400,
               width: 400,

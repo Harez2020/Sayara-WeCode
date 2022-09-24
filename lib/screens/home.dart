@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:sayaranew/screens/product_detail.dart';
 import 'package:sayaranew/screens/search_page.dart';
 
+import '../mock_data.dart';
+
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
@@ -12,15 +14,6 @@ class MyApp extends StatefulWidget {
 }
 
 class MyAppState extends State<MyApp> {
-  final List myImages = [
-    "https://www.pngplay.com/wp-content/uploads/2/Car-Wheel-Transparent-Images.png",
-    "https://www.pngplay.com/wp-content/uploads/6/Car-Engine-Background-PNG-Image.png",
-    "https://res.cloudinary.com/us-auto-parts-network-inc/image/upload/d_noimage.jpg/b_rgb:FFFFFF,c_pad,dpr_auto,f_auto,h_1200,q_auto,w_1200/v1/images/set-d100105_1",
-    "https://res.cloudinary.com/us-auto-parts-network-inc/image/upload/d_noimage.jpg/b_rgb:FFFFFF,c_pad,dpr_auto,f_auto,h_1200,q_auto,w_1200/v1/images/52079425ac_1",
-    "https://www.pngplay.com/wp-content/uploads/6/Car-Engine-Background-PNG-Image.png",
-    "https://res.cloudinary.com/us-auto-parts-network-inc/image/upload/d_noimage.jpg/b_rgb:FFFFFF,c_pad,dpr_auto,f_auto,h_1200,q_auto,w_1200/v1/images/set-d100105_1",
-  ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -112,23 +105,29 @@ class MyAppState extends State<MyApp> {
         children: List.generate(myImages.length, (index) {
           //return Container(
 
-          return Container(
-            decoration: BoxDecoration(border: Border.all(color: Colors.white)),
-            child: Image.network(
-              myImages[index],
+          return GestureDetector(
+            onTap: () => Navigator.of(context).push(MaterialPageRoute(
+              builder: (context) => ProductDetailsScreen(s: myImages[index]),
+            )),
+            child: Container(
+              decoration:
+                  BoxDecoration(border: Border.all(color: Colors.white)),
+              child: Image.network(
+                myImages[index],
+              ),
+
+              /*     ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ProductDetailsScreen()));
+                
+              },
+          
+              );
+              child: null;
+            ) */
             ),
-
-            /*     ElevatedButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => ProductDetailsScreen()));
-              
-            },
-
-            );
-            child: null;
-          ) */
           );
         }),
       ),
